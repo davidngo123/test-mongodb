@@ -33,6 +33,7 @@ router.get('/', async function(req, res, next) {
       }
       res.send(profiles)
     }catch(error){
+      console.log(error)
       res.status(500).json({"status": "error", "error": error})
     }
   });
